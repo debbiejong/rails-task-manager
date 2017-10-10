@@ -1,0 +1,17 @@
+<!-- <form action="/tasks" method="get">
+  <label for="name">Name of task</label>
+  <input type="text" name="task[name]" id="name">
+  <label for="detail">Details of task</label>
+  <input type="text" name="task[content]" id="detail">
+  <input type="submit">
+</form> -->
+
+<%= form_for(@task) do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+
+  <%= t.label :content %>
+  <%= t.text_field :content %>
+
+  <%= t.submit %>
+<% end %>

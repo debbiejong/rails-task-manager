@@ -1,0 +1,5 @@
+<h1>Name: <%= @task.name %></h1>
+<p>Details: <%= @task.content.capitalize %></p>
+<p>Date Created: <%= @task.created_at %> </p>
+
+<%= link_to "Back to Index (tasks list)", tasks_path %>

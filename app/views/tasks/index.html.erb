@@ -1,0 +1,18 @@
+<h1>List of le tasks at hand:</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <strong><%= task.name.capitalize %>:</strong> <%= task.content.capitalize %>
+      <br>
+      <%= link_to "Show more details", task_path(task) %>
+      <br>
+      <%= link_to "Edit task", edit_task_path(task) %>
+      <br>
+      <%= link_to "Delete this task", task_path(task), method: :delete, data: { confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create new task", new_task_path %>
+
